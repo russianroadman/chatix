@@ -5,6 +5,10 @@ plugins {
     kotlin("jvm") version "2.0.10"
 }
 
+springBoot {
+	mainClass.set("com.russianroadman.chatix_core.ChatixCoreApplication")
+}
+
 group = "com.russianroadman"
 version = "0.0.1-SNAPSHOT"
 
@@ -27,4 +31,9 @@ dependencies {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+tasks.withType<Jar> {
+	manifest {
+		attributes["Main-Class"] = "com.russianroadman.chatix_core.ChatixCoreApplication"
+	}
 }
