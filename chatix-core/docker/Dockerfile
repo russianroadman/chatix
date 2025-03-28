@@ -7,7 +7,7 @@ FROM openjdk:21-ea-oracle
 WORKDIR /app
 
 # Copy the JAR file into the container (adjust path if necessary)
-COPY target/app.jar app.jar
+COPY build/libs/app.jar app.jar
 
 # Expose the port your app uses
 EXPOSE 8080
