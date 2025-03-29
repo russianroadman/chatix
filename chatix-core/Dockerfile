@@ -1,8 +1,10 @@
-FROM openjdk:21-jdk-slim
-FROM gradle:latest
+FROM gradle:latest AS build
+WORKDIR /app
 COPY . .
-RUN chmod +x gradlew
-RUN gradle clean build --no-daemon
-CMD java -jar build/libs/*.jar
+RUN gradle clean build
 
-
+FROM openjdk:21-jdk-slim
+WORKDIR /app
+COPY --from=build /app/build/libs/*.jar /app/app.jar
+EXPOSE 8080
+CMD ["java", "-jar", "app.jar"]

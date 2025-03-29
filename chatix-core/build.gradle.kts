@@ -32,8 +32,3 @@ dependencies {
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
-tasks.withType<Jar> {
-	manifest {
-		attributes["Main-Class"] = "com.russianroadman.chatix_core.ChatixCoreApplication"
-	}
-}
