@@ -1,4 +1,5 @@
 /.idea/
 /chatix-core/.idea/
 /chatix-core/build/
+/chatix-core/.gradle/
 /chatix-stream/.idea/
