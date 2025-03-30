@@ -1,7 +1,10 @@
 package com.russianroadman.chatix_core.dto
 
+import java.util.*
+
 data class UserDTO(
-    var username: String,
-    var login: String,
-    var passwordHash: String,
+    val id: UUID?,
+    val username: String,
+    val login: String,
+    val passwordHash: String,
 )

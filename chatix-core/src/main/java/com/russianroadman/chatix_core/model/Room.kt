@@ -11,4 +11,7 @@ class Room: BaseEntity() {
     @Column(name = "title", nullable = false)
     var title: String? = null
 
+    @Column(name = "code", nullable = false)
+    var code: String? = null
+
 }
