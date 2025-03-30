@@ -3,12 +3,9 @@ spring:
     name: chatix-core
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: ${CX_DB_URL:jdbc:postgresql://localhost:5432/chatix}
-    username: ${CX_DB_USERNAME:postgres}
-    password: ${CX_DB_PASSWORD:1234}
-#    url: jdbc:postgresql://localhost:5432/chatix
-#    username: postgres
-#    password: 1234
+    url: ${CX_DB_URL}
+    username: ${CX_DB_USERNAME}
+    password: ${CX_DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
     hikari:
       idle-timeout: 60000
