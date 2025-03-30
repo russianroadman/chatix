@@ -3,3 +3,5 @@
 /chatix-core/build/
 /chatix-core/.gradle/
 /chatix-stream/.idea/
+/chatix-stream/.gradle/
+/chatix-stream/build/
