@@ -6,10 +6,13 @@ import jakarta.persistence.*
 @Entity(name = "User")
 class User: BaseEntity() {
 
-    @Column(name = "username")
+    @Column(name = "username", nullable = false)
     var username: String? = null
 
-    @Column(name = "password_hash")
+    @Column(name = "login", nullable = false)
+    var login: String? = null
+
+    @Column(name = "password_hash", nullable = false)
     var passwordHash: String? = null
 
 }
