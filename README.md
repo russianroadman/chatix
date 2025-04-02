@@ -1,2 +1,2 @@
-# chatix-core
-voice chats and streaming
+# CHATIX
+text & voice chats and streaming
