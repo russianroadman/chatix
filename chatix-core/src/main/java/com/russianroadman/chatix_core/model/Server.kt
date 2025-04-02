@@ -9,4 +9,7 @@ class Server: BaseEntity() {
     @Column(name = "title", nullable = false)
     var title: String? = null
 
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "server")
+    var rooms: List<Room>? = null
+
 }

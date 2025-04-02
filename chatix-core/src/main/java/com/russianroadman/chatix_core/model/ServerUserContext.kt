@@ -28,6 +28,6 @@ class ServerUserContext: BaseEntity() {
     var terminationType: ServerUserParticipationTermination = ServerUserParticipationTermination.NONE
 
     @Column(name = "entered_at", nullable = false, updatable = false)
-    var enteredAt: LocalDateTime? = null
+    var enteredAt: LocalDateTime? = LocalDateTime.now()
 
 }

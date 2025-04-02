@@ -6,6 +6,7 @@ data class MessageDTO(
     val id: UUID?,
     val userId: UUID,
     val roomId: UUID,
+    val roomCode: String,
     val text: String,
     val isDuringCall: Boolean
 )
