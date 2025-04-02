@@ -17,7 +17,7 @@ abstract class BaseEntity {
     @Id
     @GeneratedValue
     @Column(name = "id", nullable = false, updatable = false)
-    var id: UUID? = null
+    lateinit var id: UUID
 
     @CreatedDate
     @Column(name = "CREATED_AT", nullable = false, updatable = false)

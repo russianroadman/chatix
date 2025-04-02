@@ -5,8 +5,12 @@ import org.springframework.security.core.userdetails.UserDetails
 
 object SecurityUtils {
 
-    fun username(): String {
-        return SecurityContextHolder.getContext().authentication?.name ?: "system"
+    fun usernameOrSystem(): String {
+        return username() ?: "system"
+    }
+
+    fun username(): String? {
+        return SecurityContextHolder.getContext().authentication?.name
     }
 
     fun principal(): String {

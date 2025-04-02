@@ -12,4 +12,7 @@ class Server: BaseEntity() {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "server")
     var rooms: List<Room>? = null
 
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "server")
+    var userContextList: List<ServerUserContext>? = null
+
 }

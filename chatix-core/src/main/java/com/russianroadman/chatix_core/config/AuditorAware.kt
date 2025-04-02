@@ -8,6 +8,6 @@ import java.util.*
 @Component
 class AuditorAware : AuditorAware<String> {
     override fun getCurrentAuditor(): Optional<String> {
-        return Optional.ofNullable(SecurityUtils.username())
+        return Optional.ofNullable(SecurityUtils.usernameOrSystem())
     }
 }
